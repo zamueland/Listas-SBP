@@ -26,7 +26,6 @@ public class index extends javax.swing.JFrame {
     public index() {
         initComponents();
         setLocationRelativeTo(this);
-
     }
 
     /**
@@ -177,8 +176,8 @@ public class index extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        //VistaPrestamos vo = new VistaPrestamos();
-        //vo.setVisible(true);
+        VistaPrestamos vp = new VistaPrestamos();
+        vp.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     
