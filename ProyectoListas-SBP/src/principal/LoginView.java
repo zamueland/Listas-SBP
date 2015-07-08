@@ -1,6 +1,7 @@
 package principal;
 
-
+import controlador.Datos;
+import controlador.Login;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -146,7 +147,17 @@ public class LoginView extends javax.swing.JDialog {
     }//GEN-LAST:event_txtPasswordActionPerformed
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-
+        Datos misDatos = new Datos();
+        if (!misDatos.validarUsuario(txtUsuario.getText(), new String(txtPassword.getPassword()))) {
+            JOptionPane.showMessageDialog(rootPane, "Usuario o Contraseña Incorrectos");
+            txtUsuario.setText("");
+            txtPassword.setText("");
+            txtUsuario.requestFocusInWindow();
+            return;
+        }
+        index miIndex = new index();
+        this.setVisible(false);
+        miIndex.setVisible(true);
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     public static void main (String[] args){
