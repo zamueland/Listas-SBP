@@ -7,7 +7,7 @@ package Modelo;
 
 /**
  *
- * @author hp
+ * @author zamuel
  */
 public class listasDiana {
     
